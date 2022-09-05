@@ -1,8 +1,16 @@
-class Contact {
-  final String name;
-  final String address;
-  final int age;
-  final String email;
+import 'package:hive/hive.dart';
 
-  Contact(this.name, this.address, this.age, this.email);
+
+
+@HiveType()
+class Contact {
+  @HiveField(0)
+  final String name;
+  @HiveField(1)
+  final int age;
+
+  Contact(
+    this.name,
+    this.age,
+  );
 }
